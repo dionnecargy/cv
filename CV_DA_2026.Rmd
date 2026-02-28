@@ -1,0 +1,204 @@
+---
+name: Dionne
+surname: Argyropoulos
+position: "PhD"
+pronouns: she/her
+address: "Infecton and Global Health Division, Walter & Eliza Hall Institute"
+phone: +61 411 394 914
+email: "argyropoulos.d@wehi.edu.au"
+github: dionnecargy
+linkedin: dionneargy
+orcid: "0000-0002-8068-0215"
+googlescholar: "clSfd8kAAAAJ"
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: "000000"
+output:
+  vitae::awesomecv:
+    page_total: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(scholar)
+library(tibble)
+library(tidyverse)
+library(here)
+library(kableExtra)
+options(tinytex.verbose = TRUE)
+
+readExcelSheets <- function(filename){
+  # read all sheets in .xlsx 
+  all <- readxl::excel_sheets(filename)
+  
+  # import each sheet into a list using readxl::read_excel
+  list <- lapply(all, function(x) readxl::read_excel(filename, sheet = x))
+  
+  # save sheet name for each sheet (list)
+  names(list) <- all
+  
+  # breaks up list and creates a dataframe for each sheet with df names matching sheet names
+  list2env(list, envir = .GlobalEnv)
+}
+
+readExcelSheets(here::here("data", "CV_DA_2026.xlsx"))
+```
+
+# About Me
+
+\footnotesize
+
+I am a molecular epidemiologist and population geneticist currently positioned at WEHI (Walter and Eliza Hall Institute). Dionne’s avid interest in genetics, evolution and coding led me to apply these approaches to studies of infectious diseases, such as *Plasmodium falciparum* malaria in my Masters of Science and PhD, to *P. vivax* malaria and various microbes in my current first post-doc position. The research topics of interest include drug or antimicrobial resistance, spatiotemporal trends, epidemiological statistics, statistical modelling and machine learning techniques, data wrangling and visualisation. My work has involved international collaborations in East and West Africa, North and South America and Southeast Asia, as well as supervision and support of students, with various opportunities for knowledge exchange and capacity-building in coding and genetic epidemiology. Being an active member of the R-Ladies Melbourne community, and the current President (from 2024), has led to the development of practical content (workshops and the website) and has motivated me to learn and develop new techniques. Throughout my research projects, I developed a deep interest in coding and have even generated this CV using R/Quarto!
+
+\normalsize
+
+# Current Position
+
+```{r positions}
+d <- data.frame(
+  what = "Research Officer",
+  when = "2024-current",
+  with = "Walter and Eliza Hall Institute of Medical Research (WEHI)",
+  where = "Melbourne, AU",
+  why = "Post-doctoral researcher with a focus on machine learning and advanced epidemiological methods."
+)
+d %>%
+  detailed_entries(
+    what = what,
+    when = when,
+    with = with,
+    where = where,
+    why = why,
+    .protect = FALSE)
+```
+
+# Education
+
+```{r education}
+education %>% 
+  detailed_entries(what = degree, 
+                   when = year, 
+                   with = institution, 
+                   where = where, 
+                   why = details,
+                   .protect = FALSE) %>% 
+  group_by(what, when, with, where, why)
+```
+
+# Publications
+
+```{r, echo=FALSE}
+publications %>%
+  detailed_entries(
+    what = author, 
+    when = year,
+    with = title,
+    where = journal
+  ) %>% 
+  arrange(desc(when))
+```
+
+# Teaching and Supervision
+
+\footnotesize
+
+Alongside the positions outlined below, I have been actively involved in the fostering collaboration with researcher officers from the Noguchi Memorial Institute for Medical Research in Ghana (2021-2023) to develop skills in R, population genetics, PCR genotyping and epidemiology. Furthermore, I have worked with the research officers at the University of Chicago, USA (2021-2023) to further expand skills in infectious disease modelling and theoretical population genetics and ecology.
+
+\normalsize
+
+```{r teaching}
+teaching %>%
+  detailed_entries(what = institution,
+                   when = dates, #glue::glue("{start_date}--{end_date}"),
+                   with = role,
+                   where = where,
+                   why = details,
+                   .protect = FALSE)
+```
+
+\newpage
+
+# Conference Presentations
+
+```{r conferences}
+conferences %>%
+  filter(role!="Attendee") %>% 
+  brief_entries(what = glue::glue("\\textbf{<conference>} (<role>): <details>", .open = "<", .close = ">"),
+                paste0(dates, "\\newline~\\newline"), .protect = FALSE)
+```
+
+# Skills
+
+\footnotesize
+
+**Data Analysis**: Population Genetics, Epidemiology
+
+**Laboratory**: PCR Development/PCR, DBS cutting, DNA Extraction, Gel Extraction
+
+**Programming**: Advanced R, Quarto, Rmarkdown, Git/GitHub, Beginner (LaTeX, Python, Bash), Intermediate (Linux/Command-Line)
+
+**Soft-Skills**: Science communication, Coaching and Mentoring, Team member, Organised
+
+**Software**: Mac OSX Platform, Microsoft Office, BOTTLENECK, GeneMarker
+
+**Web**: GitHub Pages, BLAST, R Shiny
+
+\normalsize
+
+# Digital tools
+
+\footnotesize
+
+I have also developed a complex `R Shiny` web application to support *Plasmodium vivax* surveillance efforts.
+
+\normalsize
+
+```{r}
+tools %>%
+  detailed_entries(what = what,
+                   when = when,
+                   with = with,
+                   why = why,
+                   .protect = FALSE)
+```
+
+# Awards and Funding
+
+```{r}
+awards %>%
+  brief_entries(glue::glue("\\textbf{<award>} (<institution>): <details>", .open = "<", .close = ">"),
+                paste0(year, "\\newline~\\newline"), .protect = FALSE)
+```
+
+# Leadership, Service & Community Engagement
+
+```{r volunteering}
+volunteering %>%
+  detailed_entries(what = where,
+                   when = dates, 
+                   with = institution,
+                   where = role,
+                   why = details,
+                   .protect = FALSE)
+```
+
+# Other Scientific Communication
+
+```{r sci_comm}
+other_sci_comm %>%
+  detailed_entries(what = what,
+                   when = dates, 
+                   with = institution,
+                   where = where,
+                   why = details,
+                   .protect = FALSE)
+```
+
+# Additional training and professional development
+
+```{r training}
+training %>%
+  brief_entries(what = glue::glue("\\textbf{<training>} (<institution>)", .open = "<", .close = ">"),
+                when = year, 
+                .protect = FALSE)
+```
