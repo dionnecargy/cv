@@ -1,0 +1,504 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{000000}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Dionne}{Argyropoulos}
+
+\position{PhD}
+\address{Infecton and Global Health Division, Walter \& Eliza Hall
+Institute}
+
+\pronouns{she/her}
+\mobile{+61 411 394 914}
+\email{\href{mailto:argyropoulos.d@wehi.edu.au}{\nolinkurl{argyropoulos.d@wehi.edu.au}}}
+\orcid{0000-0002-8068-0215}
+\googlescholar{clSfd8kAAAAJ}
+\github{dionnecargy}
+\linkedin{dionneargy}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+% Pandoc CSL macros
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {March 2026}
+    {Dionne Argyropoulos~~~·~~~Curriculum Vitae}
+  {\thepage~ of \pageref{LastPage}~}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\section{About Me}\label{about-me}
+
+\footnotesize
+
+I am a molecular epidemiologist and population geneticist currently
+positioned at WEHI (Walter and Eliza Hall Institute). Dionne's avid
+interest in genetics, evolution and coding led me to apply these
+approaches to studies of infectious diseases, such as \emph{Plasmodium
+falciparum} malaria in my Masters of Science and PhD, to \emph{P. vivax}
+malaria and various microbes in my current first post-doc position. The
+research topics of interest include drug or antimicrobial resistance,
+spatiotemporal trends, epidemiological statistics, statistical modelling
+and machine learning techniques, data wrangling and visualisation. My
+work has involved international collaborations in East and West Africa,
+North and South America and Southeast Asia, as well as supervision and
+support of students, with various opportunities for knowledge exchange
+and capacity-building in coding and genetic epidemiology. Being an
+active member of the R-Ladies Melbourne community, and the current
+President (from 2024), has led to the development of practical content
+(workshops and the website) and has motivated me to learn and develop
+new techniques. Throughout my research projects, I developed a deep
+interest in coding and have even generated this CV using R/Quarto!
+
+\normalsize
+
+\section{Current Position}\label{current-position}
+
+\begin{cventries}
+    \cventry{Research Officer}{Walter and Eliza Hall Institute of Medical Research (WEHI)}{Melbourne, AU}{2024-current}{\begin{cvitems}
+\item Post-doctoral researcher with a focus on machine learning and advanced epidemiological methods.
+\end{cvitems}}
+\end{cventries}
+
+\section{Education}\label{education}
+
+\begin{cventries}
+    \cventry{Doctor of Philosophy - Medicine, Dentistry and Health Sciences}{University of Melbourne}{Melbourne, AU}{2020-24}{\begin{cvitems}
+\item Recipient of the Research Training Program Scholarship (Stipend and Fee Offset, 2020-2024) awarded to high-achieving domestic research students with a full fee offset and living allowance.
+\item My thesis, "The genetic epidemiology of the \textit{Plasmodium falciparum} malaria in high burden settings in Africa", focussed primarily on molecular epidemiology and population genetics.
+\item I compared existing and developed new methods optimised for low-density and multiclonal datasets found in asymptomatic infections in high-transmission settings in Africa.
+\item I analysed the effect of various malaria control interventions on the population genetics of asymptomatic \textit{Plasmodium falciparum} infections in an area of high seasonal malaria transmission in Ghana.
+\end{cvitems}}
+    \cventry{Master of Science (BioSciences)}{University of Melbourne}{Melbourne, AU}{2018-19}{\begin{cvitems}
+\item Coursework and Research Project.
+\item My thesis was entitled "Understanding the effects of perturbations on the population genetics of asymptomatic \textit{Plasmodium falciparum} infections in an area of high seasonal malaria transmission in Ghana".
+\item I identified minimal variation in putatively neutral microsatellite genetic diversity between seasons and following a vector control intervention.
+\item Graduated with Distinctions and Honours in First Class
+\end{cvitems}}
+    \cventry{Bachelor of Science}{University of Melbourne}{Melbourne, AU}{2015-17}{\begin{cvitems}
+\item Major in Genetics, with supplementary courses in Biochemistry and Molecular Biology, Evolution and Ecology, Reproductive Biology and Demographics.
+\item Graduated with Honours in First, Second and Third Class.
+\end{cvitems}}
+\end{cventries}
+
+\section{Publications}\label{publications}
+
+\begin{cventries}
+    \cventry{Rios-Teran, C. A., Tiedje, K. E., Bangre, O., Deed, S. L., Argyropoulos, D. C., Koram, K. A., Oduro, A. R., Ansah, P. O. \& Day, K. P; \textbackslash href\{https://doi.org/10.1101/2025.08.15.25333797\} \{\textbackslash faExternalLink\} ``DOI''}{Longitudinal analysis of the prevalence of minor Plasmodium spp. in the reservoir of asymptomatic infections through sequential interventions in Northern Sahelian Ghana}{medRxiv}{2025}{}\vspace{-4.0mm}
+    \cventry{Bareng, P., Wu, K. W., Takashima, E., Argyropoulos, D., Smith, L., Naung, M., Mazhari, R., Schoffer, K., Kiernan-Walker, N., Abraham, A., Lamont, M., Mehra, S., Lim, P., Sattabongkot, J., Monteiro, W., Lacerda, M., Healer, J., Chitnis, C. E., Tham, W.-H., Tsuboi, T., Mueller, I., Barry, A. E. \& Longley, R. J.  \textbackslash href\{https://doi.org/10.1101/2025.07.07.663616\} \{\textbackslash faExternalLink\} ``DOI''}{Navigating parasite antigen genetic diversity in the design of Plasmodium vivax serological exposure markers for malaria}{bioRxiv}{2025}{}\vspace{-4.0mm}
+    \cventry{Hafidzah, M., Degaga, T. S., Christian, M., Alam, M. S., Hossain, M. S., Baird, J. K., Sutano, I., Smith, L., Argyropoulos, D., Amelia, A. R., Noviyanti, R., Price, R. N., Mueller, I., Thriemer, K. \& Longley, R. J.}{Evaluating the Performance of Predicting Plasmodium vivax Infection Risk Using Serological Markers in Patients with Plasmodium falciparum Malaria}{medRxiv}{2025}{}\vspace{-4.0mm}
+    \cventry{Tiedje, K. E., Zhan, Q., Ruybal-Pésantez, S., Tonkin-Hill, G., He, Q., Tan, M. H., Argyropoulos, D. C., Deed, S. L., Ghansah, A., Bangre, O., Oduro, A. R., Koram, K. A., Pascual, M. \& Day, K. P.  \textbackslash href\{https://doi.org/10.7554/eLife.91411.4\} \{\textbackslash faExternalLink\} ``DOI''}{Measuring changes in Plasmodium falciparum census population size in response to sequential malaria control interventions}{eLife}{2025}{}\vspace{-4.0mm}
+    \cventry{Argyropoulos, D. C., Tan, M. H., Adobor, C., Mensah, B., Labbé, F., Tiedje, K. E., Koram, K. A., Ghansah, A. \& Day, K. P. \textbackslash href\{https://doi.org/ \} \{\textbackslash faExternalLink\} ``DOI''}{Performance of SNP barcodes to determine genetic diversity and population structure of Plasmodium falciparum in Africa \textbackslash href\{https://doi.org/10.7554/eLife.91411.4\} \{\textbackslash faExternalLink\} ``DOI''}{Frontiers in Genetics}{2023}{}\vspace{-4.0mm}
+    \cventry{Ghansah, A., Tiedje, K. E., Argyropoulos, D. C., Onwona, C. O., Deed, S. L., Labbé, F., Oduro, A. R., Koram, K. A., Pascual, M. \& Day, K. P. \textbackslash href\{https://doi.org/10.3389/fgene.2023.1071896\} \{\textbackslash faExternalLink\} ``DOI''}{Comparison of molecular surveillance methods to assess changes in the population genetics of Plasmodium falciparum in high transmission}{Frontiers in Parasitology}{2023}{}\vspace{-4.0mm}
+    \cventry{Labbé, F., He, Q., Zhan, Q., Tiedje, K. E., Argyropoulos, D. C., Tan, M. H., Ghansah, A., Day, K. P. \& Pascual, M.\textbackslash href\{https://doi.org/10.3389/fpara.2023.1067966\} \{\textbackslash faExternalLink\} ``DOI''}{Neutral vs. non-neutral genetic footprints of Plasmodium falciparum multiclonal infections}{PLoS Computational Biology}{2023}{}\vspace{-4.0mm}
+    \cventry{Tiedje, K.E., Oduro, A.R., Bangre, O., Amenga-Etego, L., Dadzie, S.K., Appawu, M.A., Frempong, K., Asoala, V., Ruybal-Pésantez, S., Narh, C.A., Deed, S.L., Argyropoulos, D. C., Ghansah, A., Agyei, S.A., Segbaya, S., Desewu, K., Williams, I., Simpson, J.A., Malm, K., Pascual, M., Koram, K.A. \& Day, K.P. \textbackslash href\{https://doi.org/10.1371/journal.pcbi.1010816\} \{\textbackslash faExternalLink\} ``DOI''}{Indoor residual spraying with a non-pyrethroid insecticide reduces the reservoir of Plasmodium falciparum in a high-transmission area in northern Ghana}{PLoS Global Public Health}{2022}{}\vspace{-4.0mm}
+    \cventry{Argyropoulos, D. C., Ruybal-Pesántez, S., Deed, S.L., Oduro, A.R., Dadzie, S.K., Appawu, M.A., Asoala, V., Pascual, M., Koram, K.A., Day, K.P. \& Tiedje, K.E. \textbackslash href\{https://doi.org/10.1371/journal.pgph.0000285\} \{\textbackslash faExternalLink\} ``DOI''}{The impact of indoor residual spraying on Plasmodium falciparum microsatellite variation in an area of high seasonal malaria transmission in Ghana, West Africa}{Molecular Ecology}{2021}{}\vspace{-4.0mm}
+\end{cventries}
+
+\section{Teaching and Supervision}\label{teaching-and-supervision}
+
+\footnotesize
+
+Alongside the positions outlined below, I have been actively involved in
+the fostering collaboration with researcher officers from the Noguchi
+Memorial Institute for Medical Research in Ghana (2021-2023) to develop
+skills in R, population genetics, PCR genotyping and epidemiology.
+Furthermore, I have worked with the research officers at the University
+of Chicago, USA (2021-2023) to further expand skills in infectious
+disease modelling and theoretical population genetics and ecology.
+
+\normalsize
+
+\begin{cventries}
+    \cventry{WEHI, Institut Pasteur Cambodia}{Trained IPC Team in R Shiny and R Package for Serology Data Analysis}{}{2026}{\begin{cvitems}
+\item Knowledge Transfer of Serology Data Analysis in R with team in IPC.
+\end{cvitems}}
+    \cventry{WEHI, UoM}{Workshop Developer, Tutor, Demonstrator for BIOL90042}{}{2026}{\begin{cvitems}
+\item Aided development of machine learning workshop and proof-read other workshop materials for R-based coding subject. Taught machine learning workshop.
+\end{cvitems}}
+    \cventry{WEHI}{Tutor and Demonstrator for Introduction to R Course, WEHI}{}{2026}{\begin{cvitems}
+\item Delivered ggplot2 plotting tutorial and assisted in tutoring WEHI students and staff in R coding.
+\end{cvitems}}
+    \cventry{WEHI}{Co-supervisor of PhD Student Alexandra Steward}{}{2025}{\begin{cvitems}
+\item Co-supervisor with experience in molecular biology (PCR) lab work, bioinformatics and genetics data analyses
+\end{cvitems}}
+    \cventry{WEHI}{Tutor for Introduction to R Course, WEHI}{}{2025}{\begin{cvitems}
+\item Assisted in tutoring students and staff in R coding.
+\end{cvitems}}
+    \cventry{WEHI}{Supervised International Collaborator and Student from Ethiopia}{}{2025}{\begin{cvitems}
+\item Managed progress, trained in PvSeroApp and data analysis, invited to meetings (19 Mar - 15 May 2025)
+\end{cvitems}}
+    \cventry{Department of Immunology and Microbiology, UoM}{Co-supervisor of undergraduate pathology research subject}{}{2023}{\begin{cvitems}
+\item Assisted in training an undergraduate student in genomic epidemiology and population genetics, performing PCR and using R to generate statistics.
+\end{cvitems}}
+    \cventry{Department of Immunology and Microbiology, UoM}{Co-supervisor of undergraduate pathology research subject}{}{2022}{\begin{cvitems}
+\item Assisted in training an undergraduate student in genomic epidemiology, population genetics and bioinformatics, focussing on vector competence genes, developing a novel PCR and data mining from an online respository (MalariaGEN Pf6: \href{https://www.malariagen.net/resource/26/}{\faExternalLink} )
+\end{cvitems}}
+    \cventry{Faculty of Science, UoM}{First Year Biology Assistant/Supervising Demonstrator and Tutor}{}{2018-2021}{\begin{cvitems}
+\item Laboratory assistant demonstrator, teacher and mentor for first-year Biology students at the UoM.
+\end{cvitems}}
+    \cventry{Faculty of Science, UoM}{First and Second Year Genetics Marker}{}{2020-2021}{\begin{cvitems}
+\item Providing feedback for students and marking assessment tasks relating to various Genetics courses.
+\end{cvitems}}
+    \cventry{Faculty of Science, UoM}{First Year Biology Marker}{}{2021}{\begin{cvitems}
+\item Providing feedback for students and marking assessment tasks relating to various First Year Biology courses.
+\end{cvitems}}
+    \cventry{Faculty of Science, UoM}{Evolution and the Human Condition Marker}{}{2021}{\begin{cvitems}
+\item Providing feedback for students and marking assessment tasks.
+\end{cvitems}}
+    \cventry{Faculty of Science, UoM}{VCE Biology Demonstrator}{}{2018-2019}{\begin{cvitems}
+\item Laboratory demonstrating and teaching for Year 12 VCE Biology Students.
+\end{cvitems}}
+    \cventry{Faculty of Science, UoM}{VCE Biology Issues in Gene Technology Workshop}{}{2019}{\begin{cvitems}
+\item I ran a 1.5-hour workshop teaching Year 12 Biology students about Gene Technology in an agricultural context.
+\end{cvitems}}
+    \cventry{Murrup Barak, UoM}{ITAS Tutor}{}{2019}{\begin{cvitems}
+\item One-on-one tutoring for university students in the Melbourne Institute of Indigenous Development.
+\end{cvitems}}
+\end{cventries}
+
+\newpage
+
+\section{Conference Presentations}\label{conference-presentations}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{European Summer Program in Infectious Disease Analysis and Modelling (ESPIDAM)} (Poster): Summer program held for PhD students, post docs and public health scientists focussed on infectious disease modeling and epidemiology. Presented poster on machine learning algorithm implemented in PvSeroTAT.}{}{2025\newline~\newline}
+    \cvhonor{}{\textbf{Malaria Seminar} (Speaker): Organised by Malaria in Melbourne committee, with on bimonthly talks on latest malaria research. Presented 20 minute talk on PvSeroTAT work.}{}{2025\newline~\newline}
+    \cvhonor{}{\textbf{Genomic Epidemiology of Malaria} (Speaker/Poster): International forum for malaria scientists, clinicians, and public health professionals working at the interface of genome science and technology, epidemiology and statistical and population genetics \href{https://coursesandconferences.wellcomeconnectingscience.org/event/genomic-epidemiology-of-malaria-20240918/}{\faExternalLink}.}{}{2024\newline~\newline}
+    \cvhonor{}{\textbf{Molecular Approaches to Malaria Conference} (Poster): International conference on latest developments in malaria research \href{https://mam2024conference.com.au/}{\faExternalLink}.}{}{2024\newline~\newline}
+    \cvhonor{}{\textbf{Malaria in Melbourne Conference} (Poster): Australian biennial conference of all aspects of malaria research \href{https://www.malariainmelbourne.org.au/}{\faExternalLink}.}{}{2023\newline~\newline}
+    \cvhonor{}{\textbf{International Congress of Genetics} (Poster): The international genetics community came together to share ideas and the latest research under the overarching theme: Genetics and Genomics: Linking Life and Society \href{https://www.icg2023.com.au/}{\faExternalLink}.}{}{2023\newline~\newline}
+    \cvhonor{}{\textbf{Peter Doherty Institute/POSSIIM Graduate Research Conference} (Speaker): Conference for all students in the department to showcase work. 10-minute oral presentation.}{}{2022\newline~\newline}
+    \cvhonor{}{\textbf{MDHS Graduate Research Conference} (Speaker): Conference on latest developments in MDHS faculty at UoM. 15-minute oral presentation to faculty.}{}{2022\newline~\newline}
+    \cvhonor{}{\textbf{DMI Graduate Research Symposium} (Speaker): Conference for all students in DMI-Doherty PhD program. I presented a five-minute talk on PhD outcomes.}{}{2021\newline~\newline}
+    \cvhonor{}{\textbf{Malaria in Melbourne Conference} (Speaker/Poster): Australian biennial conference of all aspects of malaria research. Presented three-minute short talk and poster \href{https://www.malariainmelbourne.org.au/}{\faExternalLink}.}{}{2021\newline~\newline}
+    \cvhonor{}{\textbf{Victorian Infection and Immunity Network Young Investigator Symposium} (Speaker): VIIN conferenece for post-graduate studients, post-doctorate felows and research assistants. 10-minute talk.}{}{2021\newline~\newline}
+    \cvhonor{}{\textbf{Molecular Approaches to Malaria Conference} (Poster): International conference on latest developments in malaria research \href{https://www.mam2020conference.com.au/program/}{\faExternalLink}.}{}{2020\newline~\newline}
+    \cvhonor{}{\textbf{Malaria in Melbourne Conference} (Speaker/Poster): Australian biennial conference of all aspects of malaria research. Offered for 15-minute talk, presented poster on MSc research. \href{https://www.malariainmelbourne.org.au/}{\faExternalLink}.}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{Victorian Infection and Immunity Network Young Investigator Symposium} (Poster): VIIN conferenece for post-graduate studients, post-doctorate felows and research assistants. Presented a poster on MSc research \href{https://viin.org.au/}{\faExternalLink}.}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{Stockholm International Youth Science Seminar Panel Speaker} (Panel/Poster): One of three students in one-hour panel on the topic "The Scientific Process" with moderator Anna Wetterbom, the CEO of the Young Academy of Sweden. Panel was broadcast onine to an international audience (Facebook, YouTube). Presented poster on MSc research to high school students.}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{Victorian Biodiversity Conference} (Poster): Annual scientific conference focussed on highlighting biodiversity-related research and management projects based in Victoria, AU. Presented poster on MSc research  \href{https://www.vicbiocon.com/}{\faExternalLink}.}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{BioSciences Post-Graduate Symposium} (Speaker): Students and staff of the School of BioSciences showcased their research undertaken.}{}{2018\newline~\newline}
+\end{cvhonors}
+
+\section{Skills}\label{skills}
+
+\footnotesize
+
+\textbf{Data Analysis}: Population Genetics, Epidemiology
+
+\textbf{Laboratory}: PCR Development/PCR, DBS cutting, DNA Extraction,
+Gel Extraction
+
+\textbf{Programming}: Advanced R, Quarto, Rmarkdown, Git/GitHub,
+Beginner (LaTeX, Python, Bash), Intermediate (Linux/Command-Line)
+
+\textbf{Soft-Skills}: Science communication, Coaching and Mentoring,
+Team member, Organised
+
+\textbf{Software}: Mac OSX Platform, Microsoft Office, BOTTLENECK,
+GeneMarker
+
+\textbf{Web}: GitHub Pages, BLAST, R Shiny
+
+\normalsize
+
+\section{Digital tools}\label{digital-tools}
+
+\footnotesize
+
+I have also developed a complex \texttt{R\ Shiny} web application to
+support \emph{Plasmodium vivax} surveillance efforts.
+
+\normalsize
+
+\begin{cventries}
+    \cventry{D Argyropoulos}{PvSeroApp}{}{2025}{\begin{cvitems}
+\item The PvSeroApp Shiny web application streamlines the data processing of the multi-antigen Luminex-based Plasmodium vivax serological data and applies the machine learning classification algorithm to identify individuals with recent exposure to P. vivax.  \href{https://github.com/dionnecargy/PvSeroApp/} {\faExternalLink} "GitHub"
+\end{cvitems}}
+    \cventry{D Argyropoulos}{SeroTrackR}{}{2025}{\begin{cvitems}
+\item SeroTrackR R package provides the backbone for the PvSeroApp Shiny web application, with data processing of the multi-antigen serological data and applies the machine learning classification algorithm to identify individuals with recent exposure to P. vivax.  \href{https://github.com/dionnecargy/SeroTrackR/} {\faExternalLink} "GitHub"
+\end{cvitems}}
+    \cventry{D Argyropoulos}{wastewateR}{}{2025}{\begin{cvitems}
+\item wastewateR R package contains helper functions relevant for wasetwater-specific qPCR projects for in-house and collaborator needs.  \href{https://github.com/dionnecargy/wastewateR/} {\faExternalLink} "GitHub"
+\end{cvitems}}
+    \cventry{D Argyropoulos}{melbourne}{}{2025}{\begin{cvitems}
+\item Developed melbourne R package with colour palette of melbourne tram network. \href{https://github.com/dionnecargy/melbourne/} {\faExternalLink} "GitHub"
+\end{cvitems}}
+\end{cventries}
+
+\section{Awards and Funding}\label{awards-and-funding}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{Women in Malaria 2025 Prize for Free Registration in 2026} (Women in Malaria (WiM) Conference): Won a raffle to have free attendance for the 2026 conference.}{}{2025\newline~\newline}
+    \cvhonor{}{\textbf{WEHI Postdoctoral Association Professional Development Award} (WEHI Postdoctoral Association (PDA)): Awarded A\$1,500 to attend the European Summer Program in Infectious Disease Analysis and Modelling (ESPIDAM).}{}{2025\newline~\newline}
+    \cvhonor{}{\textbf{ACREME MASTER-MAP Travel and Training Award} (Australian Centre of Research Excellence in Malaria Elimination (ACREME)): Awarded A\$2,00 to attend the European Summer Program in Infectious Disease Analysis and Modelling (ESPIDAM).  \href{https://acreme.edu.au/ai-antibodies-and-equations-lessons-from-espidam-with-dionne-argyropoulos/}{\faExternalLink} "Write-up here"}{}{2025\newline~\newline}
+    \cvhonor{}{\textbf{Graduate Researcher Conference Support Program} (The University of Melbourne): Awarded A\$1,500 to attend the Genetic Epidemiology of Malaria conference.}{}{2024\newline~\newline}
+    \cvhonor{}{\textbf{Major Bartlett University Scholarship} (The University of Melbourne): Awarded A\$2,000 to attend the Genetic Epidemiology of Malaria conference \href{https://mdhs.unimelb.edu.au/study/scholarships/n/major-bartlett-university}{\faExternalLink}}{}{2024\newline~\newline}
+    \cvhonor{}{\textbf{Malaria in Melbourne (MiM) Short Talk Prize} (Malaria in Melbourne (MiM) Conference): Selected to attend Infection and Immunology conference in Lorne 2022.}{}{2021\newline~\newline}
+    \cvhonor{}{\textbf{In2Science Invitation to Speak about Experience} (In2Science): The only invited mentor to discuss my experience in the In2Science program over various years and engaging with students in STEM topics. \href{https://in2science.org.au/news/in2science-annual-awards-and-celebrating-15-years-of-peer-mentoring-in-victoria/}{\faExternalLink}}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{In2Science Nomination for Impact Mentor Award} (In2Science): Nominated as one of the five mentors in Victoria to have demonstated a significant positive impact on engaging with students in STEM. \href{https://in2science.org.au/category/awards/}{\faExternalLink}}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{Leaders in Communities Award (LiCA)} (The University of Melbourne): Awarded after completing over 20 hours of volunteer work during my Master of Science degree. \href{https://students.unimelb.edu.au/careers/get-career-ready/leadership-and-employability-programs/leaders-in-communities-award-lica}{\faExternalLink}}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{Student Ambassador Leadership Program} (The University of Melbourne): Selected as a Student Ambassador for the Faculty of Science. \href{https://eng.unimelb.edu.au/students/coursework/progress-your-career/technical-skills-series/salp}{\faExternalLink}}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{Stockholm International Youth Science Seminar Representative} (The University of Melbourne): Selected as the only Australian student a to represent the UoM. 25 countries selected one student to attend Nobel Prize Week events (including Ceremony and Banquet) and speak about their research. \href{https://ungaforskare.se/siyss/}{\faExternalLink}}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{Communication for Research Scientists Three Minute Thesis (3MT) Runner-Up} (The University of Melbourne): Entire cohort for this subject (~150) presented a 3MT on their research, with the intention of communicating to a general science audience.}{}{2019\newline~\newline}
+    \cvhonor{}{\textbf{BioSciences Post-Graduate Symposium 10-minute talk Runner Up} (The University of Melbourne): All PhD students, Masters, Honours sutdents and staff of the School of BioSciences shared their research. I came second of 45 participants.}{}{2018\newline~\newline}
+    \cvhonor{}{\textbf{In2Science Role Model Mentor Award Finalist} (In2Science): Of 276 mentors around Victoria in 2018, 4 were finalists: one mentor per university in the program. I was the UoM finalist.}{}{2018\newline~\newline}
+\end{cvhonors}
+
+\section{Leadership, Service \& Community
+Engagement}\label{leadership-service-community-engagement}
+
+\begin{cventries}
+    \cventry{WEHI Postdoctoral Asssociation (PDA)}{WEHI Postdoctoral Asssociation (PDA)}{Communications Officer, Board Member}{2026}{\begin{cvitems}
+\item Board member attending monthly 1-hour meetings discussing and advocating postdoctoral issues and events. Communications role focusses on generating a topical monthly newsletter showcasing grants, travel awardees, events, and other articles.
+\end{cvitems}}
+    \cventry{Malaria in Melbourne (MiM)}{Malaria in Melbourne (MiM)}{Chair}{2025}{\begin{cvitems}
+\item Chaired first plenary session (Dr Steven Kho) and Short Talks 1 of the MiM Conference (30 Oct 2025).
+\end{cvitems}}
+    \cventry{Australian Centre of Research Excellence in Malaria Elimination (ACREME)}{Australian Centre of Research Excellence in Malaria Elimination (ACREME)}{Meeting Co-organiser}{2025}{\begin{cvitems}
+\item Multiple 1-hour meetings throughout the year to help organise the two-day meeting from 06 Feb to 14 Oct 2025.
+\end{cvitems}}
+    \cventry{Australian Centre of Research Excellence in Malaria Elimination (ACREME)}{Australian Centre of Research Excellence in Malaria Elimination (ACREME)}{Chair}{2025}{\begin{cvitems}
+\item Chaired final session "Updates from ACREME Investigators: Major projects" on 14 Oct 2025.
+\end{cvitems}}
+    \cventry{World Mosquito Day}{World Mosquito Day}{Poster Marker}{2025}{\begin{cvitems}
+\item Assessed scientific posters at the World Mosquito Day symposium 20 Aug 2025.
+\end{cvitems}}
+    \cventry{R-Ladies+ Melbourne}{R-Ladies+ Melbourne}{Speaker}{2025}{\begin{cvitems}
+\item Presented about R-Ladies+ Melbourne's involvement in education and teaching, especially in the It Takes a Spark STEM conference on 26 Feb 2025. \href{https://www.meetup.com/rladies-melbourne/events/306093929/} {\faExternalLink} "MeetUp Event"
+\end{cvitems}}
+    \cventry{International Day of Women in Statistics and Data Science}{International Day of Women in Statistics and Data Science}{Panelist}{2025}{\begin{cvitems}
+\item 1-hour panel to discuss the work R-Ladies+ Melbourne and R-Ladies+ focus on and advocate for:  \href{https://www.youtube.com/watch?v=dWUSP2Jj270} {\faExternalLink} "View Talk on YouTube"
+\end{cvitems}}
+    \cventry{R Consortium}{R Consortium: R Dev Day}{Participant}{2025}{\begin{cvitems}
+\item Full-day experience to work on issues relating to R with the R Consortium. First Australian R Dev Day. Worked on dashboard development. 20 Nov 2025.
+\end{cvitems}}
+    \cventry{Veski}{Women in STEM: Inspiring the Next Generation of Girls in STEM}{Mentor}{2025}{\begin{cvitems}
+\item Mentor for two students at a high school; I supervised and taught them about malaria and public health. They wrote a project about this work. 6x1-hour sessions with students, organised a half-day visit to WEHI and attended final ceremony with students.
+\end{cvitems}}
+    \cventry{R-Ladies Melbourne Inc}{R-Ladies Melbourne}{President}{2024-2026}{\begin{cvitems}
+\item Key administrator and leader in organising events and liasing with speakers, committee and group. Organised committee meetings and events, executive decision maker, liased with collaborators and other non-for-profit organisations, liased with funding bodies (DiUS, Posit).
+\end{cvitems}}
+    \cventry{R-Ladies Melbourne Inc}{It Takes A Spark STEM}{Speaker}{2023-2025}{\begin{cvitems}
+\item Co-Speaker and Co-creator of Material for 80-minute Problem Solver Session \href{https://spark-educonferences.com.au/} {\faExternalLink} "Become A Disease Detective: Solve An Outbreak" \href{https://r-ladiesmelbourne.github.io/17-11-23-ItTakesASpark/} {\faExternalLink}
+\end{cvitems}}
+    \cventry{R-Ladies Melbourne Inc}{Careers in Data Science and Statistics Panel}{Speaker}{2024}{\begin{cvitems}
+\item Moderator of Panel discussing careers in data science and statistics, focussing on R and coding languages.
+\end{cvitems}}
+    \cventry{R-Ladies Melbourne Inc}{R-Ladies Melbourne}{Vice President}{2023-2024}{\begin{cvitems}
+\item Administrator and assistant to president to organise events and liasing with speakers, committee and group.
+\end{cvitems}}
+    \cventry{R-Ladies Melbourne Inc}{R-Ladies Melbourne}{Committee Member}{2023}{\begin{cvitems}
+\item Frequent attendee of all meetings and events.
+\end{cvitems}}
+    \cventry{The Doherty Institute for Infection and Immunity}{Postgraduate Society in Immunology and Microbiology (POSSIIM)}{Committee Member}{2021}{\begin{cvitems}
+\item Student society planning and organising events. Frequent attendee of all meetings and events.
+\end{cvitems}}
+    \cventry{In2Science}{In2Science Mentoring}{Mentor}{2018-2019}{\begin{cvitems}
+\item University volunteers mentor and help teach a metropolitan classroom or regional Victorian students online via Zoom. I have done both.
+\end{cvitems}}
+    \cventry{University of Melbourne}{Faculty of Science}{Student Ambassador}{2019}{\begin{cvitems}
+\item A select cohort of students with a passion for studying science were chosen to represent the Faculty at events.
+\end{cvitems}}
+    \cventry{Bio21 Institute}{Work Experience Programme}{Speaker}{2018/2019}{\begin{cvitems}
+\item Two-hour activity on malaria research: 1-hour presentation and 1-hour practical investigation teaching malaria detection methods.
+\end{cvitems}}
+    \cventry{Hobsons Bay City Council}{Future Leaders for Sustainability}{Speaker}{2019}{\begin{cvitems}
+\item Presentation to Year 8/9s from three schools in Hobson's Bay Area about my journey as a student and research.
+\end{cvitems}}
+    \cventry{Bio21 Institute}{Open House Melbourne}{Speaker}{2019}{\begin{cvitems}
+\item Weekend where all buildings in Melbourne are showcased to the public. I represented the Bio21 Institute.
+\end{cvitems}}
+    \cventry{University of Melbourne}{Science: Day 1 Host, Faculty of Science}{Host}{2019}{\begin{cvitems}
+\item Led a tour around the UoM and spoke to new Science students.
+\end{cvitems}}
+    \cventry{University of Melbourne}{Work Experience Panel Speaker}{Speaker}{2019}{\begin{cvitems}
+\item Asked to speak about my experiences as a UoM student and the path I took to get to be a MSc student.
+\end{cvitems}}
+    \cventry{University of Melbourne}{Graduate Study Expo, Faculty of Science}{Speaker}{2019}{\begin{cvitems}
+\item Stood with the Faculty of Science. Spoke to undergraduate and prospective graduate students about pathways in the Faculty.
+\end{cvitems}}
+    \cventry{Ecolinc}{Ecolinc Women in STEM Speed-Dating}{Speaker}{2019}{\begin{cvitems}
+\item Travelled to Bacchus Marsh (regional Victoria) to 'speed-date' with girls in Years 9/10 and encourage passion for STEM.
+\end{cvitems}}
+    \cventry{University of Melbourne}{Volunteering Expo, Faculty of Science/In2Science}{Speaker}{2019}{\begin{cvitems}
+\item On behalf of In2Science and the Science Ambassadors, I helped get other students to volunteer for the Faculty.
+\end{cvitems}}
+    \cventry{University of Melbourne}{The Science Experience: Group Leader, Faculty of Science}{Speaker/Teacher}{2019}{\begin{cvitems}
+\item Year 8-11 program at UoM to teach about the different fields of science. I led a group of 10 students.
+\end{cvitems}}
+    \cventry{Bio21 Institute}{Bachelor of Science Blended Camp}{Speaker/Teacher}{2018}{\begin{cvitems}
+\item Summer Camp with 20 Bachelor of Science students from India. I engaged students about malaria and research.
+\end{cvitems}}
+    \cventry{Melbourne University Genetics Society}{Graduate Student Information Panel}{Speaker}{2018}{\begin{cvitems}
+\item Panel event with 5 graduate students to discuss future pahtways with undergraduate students interested in Genetics.
+\end{cvitems}}
+\end{cventries}
+
+\section{Other Scientific
+Communication}\label{other-scientific-communication}
+
+\begin{cventries}
+    \cventry{Victorian Young Tall Poppy Science Award}{Australian Institute of Policy & Science}{Deakin University, AU}{2025}{\begin{cvitems}
+\item Accepted the award and spoke on behalf of Dr Rhea Longley.
+\end{cvitems}}
+    \cventry{Doctor of Philosophy Research Thesis Completion Seminar}{Faculty of Medicine, Dentistry and Health Sciences}{University of Melbourne, AU}{2024}{\begin{cvitems}
+\item Presented and ran an hour seminar on final PhD thesis research aims, published work and outcomes.
+\end{cvitems}}
+    \cventry{Malaria Seminar}{Malaria Seminar}{University of Melbourne, AU}{2022}{\begin{cvitems}
+\item Asked to present 15-minute talk to malaria research community in Melbourne.
+\end{cvitems}}
+    \cventry{Molecular Ecology Spotlight: Interview}{Molecular Ecology}{Molecular Ecology}{2021}{\begin{cvitems}
+\item Featured Article and Interview in Molecular Ecology \href{https://molecularecologyblog.com/2021/09/01/interview-with-the-authors-does-indoor-spraying-alter-the-genetic-diversity-of-malaria-causing-parasites-and-what-does-this-mean-for-long-term-control/}{\faExternalLink}.
+\end{cvitems}}
+    \cventry{Doctor of Philosophy Research Thesis Confirmation Seminar}{Faculty of Medicine, Dentistry and Health Sciences}{University of Melbourne, AU}{2021}{\begin{cvitems}
+\item Presented and ran an hour seminar on proposed PhD thesis research aims and preliminary work.
+\end{cvitems}}
+    \cventry{Communication for Research Scientists 15-minute Talk}{Faculty of Science}{University of Melbourne, AU}{2019}{\begin{cvitems}
+\item 15-minute final talk on MSc research talk, and 2,000 word manuscript.
+\end{cvitems}}
+    \cventry{Master of Science (BioSciences) Research Thesis Completion Seminar}{Faculty of Science}{University of Melbourne, AU}{2019}{\begin{cvitems}
+\item 15-minute oral presentation of MSc research.
+\end{cvitems}}
+    \cventry{Master of Science (BioSciences) Research Thesis Proposal}{Faculty of Science}{University of Melbourne, AU}{2018}{\begin{cvitems}
+\item 15-minute oral presentation and 3,300 word research proposal.
+\end{cvitems}}
+    \cventry{Graduate Seminar in Ecology and Evolution}{Faculty of Science}{University of Melbourne, AU}{2018}{\begin{cvitems}
+\item Presented and ran 3 hour seminar about habitat-specific responses to population expansions/retractions.
+\end{cvitems}}
+\end{cventries}
+
+\section{Additional training and professional
+development}\label{additional-training-and-professional-development}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{Modelling and AI for Infectious Disease Control} (European Summer Program in Infectious Disease Analysis and Modelling (ESPIDAM))}{}{2025}
+    \cvhonor{}{\textbf{Within Host Modelling of Infectious Diseases} (European Summer Program in Infectious Disease Analysis and Modelling (ESPIDAM))}{}{2025}
+    \cvhonor{}{\textbf{Short Course: Understanding Machine Learning} (DataCamp)}{}{2025}
+    \cvhonor{}{\textbf{Short Course: Supervised Learning in R: Classification} (DataCamp)}{}{2025}
+    \cvhonor{}{\textbf{Short Course: Supervised Learning in R: Regression} (DataCamp)}{}{2025}
+    \cvhonor{}{\textbf{Short Course: Modeling with tidymodels in R} (DataCamp)}{}{2025}
+    \cvhonor{}{\textbf{Short Course: Data Carpentry Genomics} (Data Carpentries)}{}{2023}
+    \cvhonor{}{\textbf{Short Course: Software Carpentry with Python} (Data Carpentries)}{}{2023}
+    \cvhonor{}{\textbf{Workshop: Phylogenetics in Infectious Disease Epidemiology} (The Doherty Institute for Infection and Immunity (Doherty Institute))}{}{2021}
+    \cvhonor{}{\textbf{UOM subject: Infectious Disease Modelling} (The University of Melbourne)}{}{2020}
+    \cvhonor{}{\textbf{UOM subject: Principles of Immunology} (The University of Melbourne)}{}{2020}
+    \cvhonor{}{\textbf{Certification: Melbourne Teaching Certificate for Sessional Teachers \href{https://melbourne-cshe.unimelb.edu.au/pd/teaching-learning-and-assessment/melbourne-teaching-certificate}{\faExternalLink}} (The University of Melbourne)}{}{2020}
+    \cvhonor{}{\textbf{Workshop: LaTeX Beginners' Workshop} (The University of Melbourne)}{}{2020}
+    \cvhonor{}{\textbf{UOM subject: Infectious Diseases Epidemiology} (The University of Melbourne)}{}{2019}
+    \cvhonor{}{\textbf{UOM subject: Communication for Research Scientists} (The University of Melbourne)}{}{2019}
+    \cvhonor{}{\textbf{Workshop: Public Speaking} (The University of Melbourne)}{}{2019}
+    \cvhonor{}{\textbf{Workshop: Indigenous Cultural Awareness} (Murrup Barrak)}{}{2019}
+    \cvhonor{}{\textbf{Workshop: Science Gallery Women in STEM} (The University of Melbourne)}{}{2019}
+    \cvhonor{}{\textbf{Workshop: Spatial Analysis in R} (The University of Melbourne)}{}{2019}
+    \cvhonor{}{\textbf{Workshop: Introduction to R} (The University of Melbourne)}{}{2019}
+    \cvhonor{}{\textbf{UOM subject: Graduate Seminar in Ecology and Evolution} (The University of Melbourne)}{}{2018}
+    \cvhonor{}{\textbf{UOM subject: Epidemiology 1} (The University of Melbourne)}{}{2018}
+    \cvhonor{}{\textbf{UOM subject: Thinking and Reasoning with Data} (The University of Melbourne)}{}{2018}
+    \cvhonor{}{\textbf{UOM subject: Genetic Epidemiology} (The University of Melbourne)}{}{2018}
+    \cvhonor{}{\textbf{Workshop: R Markdown} (The University of Melbourne)}{}{2018}
+    \cvhonor{}{\textbf{Workshop: Building R Packages} (The University of Melbourne)}{}{2018}
+    \cvhonor{}{\textbf{Workshop: Linear Modeling and Bayesian Statistics in R} (The University of Melbourne)}{}{2018}
+\end{cvhonors}
+
+
+\label{LastPage}~
+\end{document}
