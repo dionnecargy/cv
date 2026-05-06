@@ -1,0 +1,164 @@
+---
+name: Dionne
+surname: Argyropoulos
+position: "PhD"
+pronouns: she/her
+address: "Infecton and Global Health Division, Walter & Eliza Hall Institute"
+phone: +61 411 394 914
+email: "argyropoulos.d@wehi.edu.au"
+github: dionnecargy
+linkedin: dionneargy
+orcid: "0000-0002-8068-0215"
+googlescholar: "clSfd8kAAAAJ"
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: "000000"
+output:
+  vitae::awesomecv:
+    page_total: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(scholar)
+library(tibble)
+library(tidyverse)
+library(here)
+library(kableExtra)
+options(tinytex.verbose = TRUE)
+
+readExcelSheets <- function(filename){
+  # read all sheets in .xlsx 
+  all <- readxl::excel_sheets(filename)
+  
+  # import each sheet into a list using readxl::read_excel
+  list <- lapply(all, function(x) readxl::read_excel(filename, sheet = x))
+  
+  # save sheet name for each sheet (list)
+  names(list) <- all
+  
+  # breaks up list and creates a dataframe for each sheet with df names matching sheet names
+  list2env(list, envir = .GlobalEnv)
+}
+
+readExcelSheets(here::here("data", "CV_DA_2026.xlsx"))
+```
+
+# About Me
+
+\footnotesize
+
+I have an avid interest in genetics and evolution which led me to apply these approaches to studies of infectious diseases, such as *Plasmodium falciparum* malaria in my Masters of Science and PhD, to *P. vivax* malaria and various microbes in my current first post-doc position. I am also an active member of the R-Ladies+ Melbourne community and continue to contribute to Women in STEM based volunteering programs. Throughout my research projects, I have developed a deep interest in coding and have even generated this CV using R!
+
+\normalsize
+
+# Current Position
+
+```{r positions}
+d <- data.frame(
+  what = "Research Officer",
+  when = "2024-current",
+  with = "Walter and Eliza Hall Institute of Medical Research (WEHI)",
+  where = "Melbourne, AU",
+  why = "Post-doctoral researcher with a focus on machine learning and advanced epidemiological methods."
+)
+d %>%
+  detailed_entries(
+    what = what,
+    when = when,
+    with = with,
+    where = where,
+    .protect = FALSE
+  )
+```
+
+# Education
+
+```{r education}
+education %>% 
+  detailed_entries(
+    what = degree, 
+    when = year, 
+    with = institution, 
+    where = where,
+    .protect = FALSE
+  ) %>% 
+  group_by(what, when, with, where)
+```
+
+# Publications
+
+Shown are selected publications with first, second or third-author contributions. 
+
+```{r, echo=FALSE}
+publications %>%
+  filter(selected == "y") %>% 
+  detailed_entries(
+    what = paste(author, " ", doi),
+    when = year,
+    with = title,
+    where = journal
+  ) %>%
+  arrange(desc(when))
+```
+
+# Teaching and Supervision
+
+\footnotesize
+
+I have been actively involved in the fostering collaboration with researcher officers from the Noguchi Memorial Institute for Medical Research in Ghana (2021-2023), University of Chicago, USA (2021-2023) Institut Pasteur Cambodia (2026) to develop and expand skills in R, population genetics, infectious disease modelling and/or epidemiology.
+
+I have also had casual employment with the University of Melbourne to teach various subjects in Biology, Genetics and Evolution (2018-2021) and was a tutor employed my the Indigenous Tutorial Access Scheme (ITAS, 2019). I am currently working with WEHI to develop and give R-related workshops and courses. 
+
+\normalsize
+
+# Conference Presentations
+
+Shown are select conferences where I have presented a poster and/or a talk. 
+
+```{r conferences}
+conferences %>%
+  filter(role!="Attendee") %>% 
+  filter(selected=="y") %>%
+  brief_entries(
+    what = glue::glue(
+      "\\textbf{<conference>} (<role>): <details>", 
+      .open = "<", 
+      .close = ">"
+    ),
+    paste0(dates, "\\newline~\\newline"), 
+    .protect = FALSE
+  )
+```
+
+# Awards and Funding
+
+```{r}
+awards %>%
+  filter(selected=="y") %>%
+  mutate(
+    institution = gsub("The University of Melbourne", "UoM", institution),
+    details = gsub("\\(ESPIDAM)", "", details),
+    details = gsub("the European Summer Program in Infectious Disease Analysis and Modelling", "ESPIDAM", details)
+  ) %>% 
+  brief_entries(
+    glue::glue("\\textbf{<award>} (<institution>): <details>", .open = "<", .close = ">"),
+    paste0(year, "\\newline~\\newline"), 
+    .protect = FALSE
+  )
+```
+
+# Leadership, Service & Community Engagement
+
+```{r volunteering}
+volunteering %>%
+  filter(selected=="y") %>% 
+  detailed_entries(
+    what = where,
+    when = dates, 
+    with = institution,
+    where = role,
+    why = details,
+    .protect = FALSE
+  )
+```

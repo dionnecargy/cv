@@ -48,7 +48,9 @@ readExcelSheets(here::here("data", "CV_DA_2026.xlsx"))
 
 \footnotesize
 
-I am a molecular epidemiologist and population geneticist currently positioned at WEHI (Walter and Eliza Hall Institute). Dionne’s avid interest in genetics, evolution and coding led me to apply these approaches to studies of infectious diseases, such as *Plasmodium falciparum* malaria in my Masters of Science and PhD, to *P. vivax* malaria and various microbes in my current first post-doc position. The research topics of interest include drug or antimicrobial resistance, spatiotemporal trends, epidemiological statistics, statistical modelling and machine learning techniques, data wrangling and visualisation. My work has involved international collaborations in East and West Africa, North and South America and Southeast Asia, as well as supervision and support of students, with various opportunities for knowledge exchange and capacity-building in coding and genetic epidemiology. Being an active member of the R-Ladies Melbourne community, and the current President (from 2024), has led to the development of practical content (workshops and the website) and has motivated me to learn and develop new techniques. Throughout my research projects, I developed a deep interest in coding and have even generated this CV using R/Quarto!
+I am an epidemiologist and population geneticist currently positioned at WEHI (Walter and Eliza Hall Institute). I have an avid interest in genetics, evolution and coding which led me to apply these approaches to studies of infectious diseases, such as *Plasmodium falciparum* malaria in my Masters of Science and PhD, to *P. vivax* malaria and various microbes in my current first post-doc position. Research topics of interest include drug or antimicrobial resistance, spatiotemporal trends, epidemiological statistics and machine learning techniques, data wrangling and visualisation.
+
+My work has involved international collaborations across Africa, the Americas and Southeast Asia, as well as supervision and support of students, with various opportunities for knowledge exchange and capacity-building in coding and epidemiology. Being an active member of the R-Ladies+ Melbourne community, and the current President (2024-2026), has led to the development of practical content (workshops and the website) and has motivated me to learn and develop new techniques. Throughout my research projects, I have developed a deep interest in coding and have even generated this CV using R/Quarto!
 
 \normalsize
 
@@ -69,19 +71,22 @@ d %>%
     with = with,
     where = where,
     why = why,
-    .protect = FALSE)
+    .protect = FALSE
+  )
 ```
 
 # Education
 
 ```{r education}
 education %>% 
-  detailed_entries(what = degree, 
-                   when = year, 
-                   with = institution, 
-                   where = where, 
-                   why = details,
-                   .protect = FALSE) %>% 
+  detailed_entries(
+    what = degree, 
+    when = year, 
+    with = institution, 
+    where = where, 
+    why = details,
+    .protect = FALSE
+  ) %>% 
   group_by(what, when, with, where, why)
 ```
 
@@ -90,11 +95,11 @@ education %>%
 ```{r, echo=FALSE}
 publications %>%
   detailed_entries(
-    what = author, 
+    what = paste(author, " ", doi),
     when = year,
     with = title,
     where = journal
-  ) %>% 
+  ) %>%
   arrange(desc(when))
 ```
 
@@ -108,12 +113,14 @@ Alongside the positions outlined below, I have been actively involved in the fos
 
 ```{r teaching}
 teaching %>%
-  detailed_entries(what = institution,
-                   when = dates, #glue::glue("{start_date}--{end_date}"),
-                   with = role,
-                   where = where,
-                   why = details,
-                   .protect = FALSE)
+  detailed_entries(
+    what = institution,
+    when = dates, #glue::glue("{start_date}--{end_date}"),
+    with = role,
+    where = where,
+    why = details,
+    .protect = FALSE
+  )
 ```
 
 \newpage
@@ -123,15 +130,18 @@ teaching %>%
 ```{r conferences}
 conferences %>%
   filter(role!="Attendee") %>% 
-  brief_entries(what = glue::glue("\\textbf{<conference>} (<role>): <details>", .open = "<", .close = ">"),
-                paste0(dates, "\\newline~\\newline"), .protect = FALSE)
+  brief_entries(
+    what = glue::glue("\\textbf{<conference>} (<role>): <details>", .open = "<", .close = ">"),
+    paste0(dates, "\\newline~\\newline"), 
+    .protect = FALSE
+  )
 ```
 
 # Skills
 
 \footnotesize
 
-**Data Analysis**: Population Genetics, Epidemiology
+**Data Analysis**: Population Genetics, Epidemiology, Machine Learning
 
 **Laboratory**: PCR Development/PCR, DBS cutting, DNA Extraction, Gel Extraction
 
@@ -155,50 +165,61 @@ I have also developed a complex `R Shiny` web application to support *Plasmodium
 
 ```{r}
 tools %>%
-  detailed_entries(what = what,
-                   when = when,
-                   with = with,
-                   why = why,
-                   .protect = FALSE)
+  detailed_entries(
+    what = what,
+    when = when,
+    with = with,
+    why = why,
+    .protect = FALSE
+  )
 ```
 
 # Awards and Funding
 
 ```{r}
 awards %>%
-  brief_entries(glue::glue("\\textbf{<award>} (<institution>): <details>", .open = "<", .close = ">"),
-                paste0(year, "\\newline~\\newline"), .protect = FALSE)
+  brief_entries(
+    glue::glue("\\textbf{<award>} (<institution>): <details>", .open = "<", .close = ">"),
+    paste0(year, "\\newline~\\newline"), 
+    .protect = FALSE
+  )
 ```
 
 # Leadership, Service & Community Engagement
 
 ```{r volunteering}
 volunteering %>%
-  detailed_entries(what = where,
-                   when = dates, 
-                   with = institution,
-                   where = role,
-                   why = details,
-                   .protect = FALSE)
+  detailed_entries(
+    what = where,
+    when = dates, 
+    with = institution,
+    where = role,
+    why = details,
+    .protect = FALSE
+  )
 ```
 
 # Other Scientific Communication
 
 ```{r sci_comm}
 other_sci_comm %>%
-  detailed_entries(what = what,
-                   when = dates, 
-                   with = institution,
-                   where = where,
-                   why = details,
-                   .protect = FALSE)
+  detailed_entries(
+    what = what,
+    when = dates, 
+    with = institution,
+    where = where,
+    why = details,
+    .protect = FALSE
+  )
 ```
 
 # Additional training and professional development
 
 ```{r training}
 training %>%
-  brief_entries(what = glue::glue("\\textbf{<training>} (<institution>)", .open = "<", .close = ">"),
-                when = year, 
-                .protect = FALSE)
+  brief_entries(
+    what = glue::glue("\\textbf{<training>} (<institution>)", .open = "<", .close = ">"),
+    when = year, 
+    .protect = FALSE
+  )
 ```

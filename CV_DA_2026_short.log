@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.6)  6 MAY 2026 15:50
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.6)  6 MAY 2026 16:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**CV_DA_2026.tex
-(./CV_DA_2026.tex
+**CV_DA_2026_short.tex
+(./CV_DA_2026_short.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 (./awesome-cv.cls
@@ -858,8 +858,8 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 )
 LaTeX Font Info:    Font shape `TU/SourceSans3(0)/m/n' will be
 (Font)              scaled to size 10.95pt on input line 105.
-(./CV_DA_2026.aux)
-\openout1 = `CV_DA_2026.aux'.
+(./CV_DA_2026_short.aux)
+\openout1 = `CV_DA_2026_short.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
 LaTeX Font Info:    ... okay on input line 105.
@@ -950,9 +950,9 @@ LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 105.
 Package hyperref Info: Link coloring OFF on input line 105.
-(./CV_DA_2026.out) (./CV_DA_2026.out)
+(./CV_DA_2026_short.out) (./CV_DA_2026_short.out)
 \@outlinefile=\write4
-\openout4 = `CV_DA_2026.out'.
+\openout4 = `CV_DA_2026_short.out'.
 
 \headertextwidth=\skip99
 \headerphotowidth=\skip100
@@ -998,84 +998,51 @@ LaTeX Font Info:    Font shape `TU/SourceSans3(1)/b/n' will be
 LaTeX Font Info:    Font shape `TU/SourceSans3(0)/m/n' will be
 (Font)              scaled to size 9.0pt on input line 129.
 LaTeX Font Info:    Font shape `TU/SourceSans3(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 135.
+(Font)              scaled to size 9.0pt on input line 133.
 LaTeX Font Info:    Font shape `TU/SourceSans3(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 157.
+(Font)              scaled to size 10.0pt on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(1)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 157.
+(Font)              scaled to size 10.0pt on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(3)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 157.
+(Font)              scaled to size 9.0pt on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(3)/m/sl' in size <9> not available
-(Font)              Font shape `TU/SourceSans3(3)/m/it' tried instead on input line 157.
+(Font)              Font shape `TU/SourceSans3(3)/m/it' tried instead on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(3)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 157.
+(Font)              scaled to size 9.0pt on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 157.
+(Font)              scaled to size 8.0pt on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(1)/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 157.
+(Font)              scaled to size 8.0pt on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(3)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 157.
+(Font)              scaled to size 8.0pt on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(3)/m/sl' in size <8> not available
-(Font)              Font shape `TU/SourceSans3(3)/m/it' tried instead on input line 157.
+(Font)              Font shape `TU/SourceSans3(3)/m/it' tried instead on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(3)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 157.
+(Font)              scaled to size 8.0pt on input line 145.
 LaTeX Font Info:    Font shape `TU/SourceSans3(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 193.
-LaTeX Font Info:    Font shape `TU/SourceSans3(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 193.
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 193.
-
+(Font)              scaled to size 16.0pt on input line 186.
 [1
 
 ]
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 255.
-
-[2]
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 257.
-
-[3]
 LaTeX Font Info:    Font shape `TU/SourceSans3(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 262.
+(Font)              scaled to size 9.0pt on input line 192.
 LaTeX Font Info:    Font shape `TU/SourceSans3(1)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 262.
-LaTeX Font Info:    Font shape `TU/SourceSans3(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 286.
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 314.
-
-[4]
-LaTeX Font Info:    Font shape `TU/SourceSans3(0)/m/n' will be
-(Font)              scaled to size 16.0pt on input line 350.
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 350.
-
-[5]
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 437.
-
-[6]
-Runaway argument?
-ustralian Institute of Policy \unskip \relax \UseTaggingSocket {tbl/p\ETC.
-! Forbidden control sequence found while scanning use of \@xifmtarg.
-<inserted text> 
-                \par 
-l.445 \end{cvitems}}
-                    
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
- 
+(Font)              scaled to size 9.0pt on input line 192.
+[2] [3] (./CV_DA_2026_short.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+ ***********
+Package rerunfilecheck Info: File `CV_DA_2026_short.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 34674 strings out of 470015
- 706530 string characters out of 5473884
- 1298791 words of memory out of 5000000
- 62834 multiletter control sequences out of 15000+600000
- 632247 words of font info for 139 fonts, out of 8000000 for 9000
+ 34669 strings out of 470015
+ 706524 string characters out of 5473884
+ 1283776 words of memory out of 5000000
+ 62830 multiletter control sequences out of 15000+600000
+ 632231 words of font info for 137 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,12n,136p,625b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on CV_DA_2026.pdf (6 pages).
+ 131i,12n,136p,588b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on CV_DA_2026_short.pdf (3 pages).
