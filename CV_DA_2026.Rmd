@@ -50,7 +50,7 @@ readExcelSheets(here::here("data", "CV_DA_2026.xlsx"))
 
 I am an epidemiologist and population geneticist currently positioned at WEHI (Walter and Eliza Hall Institute). I have an avid interest in genetics, evolution and coding which led me to apply these approaches to studies of infectious diseases, such as *Plasmodium falciparum* malaria in my Masters of Science and PhD, to *P. vivax* malaria and various microbes in my current first post-doc position. Research topics of interest include drug or antimicrobial resistance, spatiotemporal trends, epidemiological statistics and machine learning techniques, data wrangling and visualisation.
 
-My work has involved international collaborations across Africa, the Americas and Southeast Asia, as well as supervision and support of students, with various opportunities for knowledge exchange and capacity-building in coding and epidemiology. Being an active member of the R-Ladies+ Melbourne community, and the current President (2024-2026), has led to the development of practical content (workshops and the website) and has motivated me to learn and develop new techniques. Throughout my research projects, I have developed a deep interest in coding and have even generated this CV using R/Quarto!
+My work has involved international collaborations across Africa, the Americas and Southeast Asia, as well as supervision and support of students, with various opportunities for knowledge exchange and capacity-building in coding and epidemiology. Being an active member of the R-Ladies+ Melbourne community, with various executive roles (Vice-president, 2023-2024; President, 2024-2026; Treasurer, 2026-), has led to the development of practical content (workshops and the website) and has motivated me to learn and develop new techniques. Throughout my research projects, I have developed a deep interest in coding and have even generated this CV using R/Quarto!
 
 \normalsize
 
@@ -107,7 +107,7 @@ publications %>%
 
 \footnotesize
 
-Alongside the positions outlined below, I have been actively involved in the fostering collaboration with researcher officers from the Noguchi Memorial Institute for Medical Research in Ghana (2021-2023) to develop skills in R, population genetics, PCR genotyping and epidemiology. Furthermore, I have worked with the research officers at the University of Chicago, USA (2021-2023) to further expand skills in infectious disease modelling and theoretical population genetics and ecology.
+Alongside the positions outlined below, I have been actively involved in the fostering collaboration with researcher officers from Institut Pasteur (2024-current), Institut Pasteur du Cambodige (2024-current), Papua New Guinea Institute of Medical Research (2026), and the Noguchi Memorial Institute for Medical Research in Ghana (2021-2023) to develop skills in R, epidemiology and/or population genetics. Furthermore, I have worked with the research officers at the University of Chicago, USA (2021-2023) and at the University of Melbourne (2024-current) to further expand skills in infectious disease modelling and theoretical population genetics and ecology.
 
 \normalsize
 
@@ -203,6 +203,8 @@ volunteering %>%
 
 ```{r sci_comm}
 other_sci_comm %>%
+  # Escape literal "&" since .protect = FALSE leaves special characters unescaped
+  mutate(institution = str_replace_all(institution, "&", "\\\\&")) %>%
   detailed_entries(
     what = what,
     when = dates, 

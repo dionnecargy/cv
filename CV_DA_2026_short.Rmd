@@ -106,15 +106,15 @@ publications %>%
 
 \footnotesize
 
-I have been actively involved in the fostering collaboration with researcher officers from the Noguchi Memorial Institute for Medical Research in Ghana (2021-2023), University of Chicago, USA (2021-2023) Institut Pasteur Cambodia (2026) to develop and expand skills in R, population genetics, infectious disease modelling and/or epidemiology.
+I have been actively involved in the fostering collaboration with researcher officers from Institut Pasteur (2024-current), Institut Pasteur du Cambodige (2024-current), Papua New Guinea Institute of Medical Research (2026), University of Chicago, USA (2021-2023) and the Noguchi Memorial Institute for Medical Research in Ghana (2021-2023) to develop skills in R, epidemiology and/or population genetics. 
 
-I have also had casual employment with the University of Melbourne to teach various subjects in Biology, Genetics and Evolution (2018-2021) and was a tutor employed my the Indigenous Tutorial Access Scheme (ITAS, 2019). I am currently working with WEHI to develop and give R-related workshops and courses. 
+I have also had casual employment with the University of Melbourne to teach various subjects in Biology, Genetics and Evolution (2018-2021) and was a tutor employed my the Indigenous Tutorial Access Scheme (ITAS, 2019). I am currently working with WEHI to develop and give R-related workshops and courses, including BIOL90042: Coding and Data Analysis in Biomedicine which I am the Lead Tutor and will be a coordinator in 2027.
 
 \normalsize
 
 # Conference Presentations
 
-Shown are select conferences where I have presented a poster and/or a talk. 
+Shown are select conferences since 2024 where I have presented a poster and/or a talk. 
 
 ```{r conferences}
 conferences %>%
@@ -148,6 +148,7 @@ awards %>%
   )
 ```
 
+\newpage
 # Leadership, Service & Community Engagement
 
 ```{r volunteering}
